@@ -76,6 +76,28 @@ router.post('/addMembers', (req, res, next) => {
       user_object.group.push(group_id)
       console.log(user_object)
       user_object.save((err, user) => {
+        var transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+          user: 'zainkabster@gmail.com',
+          pass: ''
+        }
+      });
+
+      var mailOptions = {
+        from: 'zainkabster@gmail.com',
+        to: 'lors.kushtov@gmail.com',
+        subject: 'Sending nudes using Node.js',
+        text: 'That was easy!'
+      };
+
+      transporter.sendMail(mailOptions, function(error, info){
+        if (error) {
+          console.log(error);
+        } else {
+          console.log('Email sent: ' + info);
+        }
+      });
         return res.json({
           success: true,
           msg: "Group ID added to the user group array",
@@ -145,28 +167,7 @@ router.get('/profile', passport.authenticate('jwt', {
 
 router.post('/tester', (req, res, next) => {
 
-  var transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: 'zainkabster@gmail.com',
-    pass: 'roflicopter123!'
-  }
-});
 
-var mailOptions = {
-  from: 'zainkabster@gmail.com',
-  to: 'lors.kushtov@gmail.com',
-  subject: 'Sending nudes using Node.js',
-  text: 'That was easy!'
-};
-
-transporter.sendMail(mailOptions, function(error, info){
-  if (error) {
-    console.log(error);
-  } else {
-    console.log('Email sent: ' + info);
-  }
-});
   // let transporter = nodemailer.createTransport({
   //   host: 'smtp.ethereal.email',
   //   port: 587,
