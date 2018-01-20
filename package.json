@@ -1,0 +1,21 @@
+{
+  "name": "pennapps2018w",
+  "version": "1.0.0",
+  "description": "Schedules events for you and your friends",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "cors": "*",
+    "body-parser": "*",
+    "express": "*",
+    "jsonwebtoken": "*",
+    "mongoose": "*",
+    "nodemon": "^1.12.1",
+    "passport": "*",
+    "passport-jwt": "*"
+  },
+  "author": "Anonymoose",
+  "license": "ISC"
+}
