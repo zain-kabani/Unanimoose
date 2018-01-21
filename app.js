@@ -60,9 +60,23 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname + '/front-end/production/index.html'));
 });
 
+// Group Details Route
 app.get('/group', (req, res) => {
   res.sendFile(path.join(__dirname + '/front-end/production/group_survey.html'));
 });
+
+// Group Creation Route
+app.get('/CreateGroup', (req, res) => {
+  res.sendFile(path.join(__dirname + '/front-end/production/create_group.html'));
+});
+
+// Login Route
+app.get('/login', (req, res) => {
+  res.sendFile(path.join(__dirname + '/front-end/production/login.html'));
+});
+
+
+
 
 // Start Server
 app.listen(port, () => {
