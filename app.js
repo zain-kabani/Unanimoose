@@ -60,6 +60,10 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname + '/front-end/production/index.html'));
 });
 
+app.get('/group', (req, res) => {
+  res.sendFile(path.join(__dirname + '/front-end/production/group_survey.html'));
+});
+
 // Start Server
 app.listen(port, () => {
   console.log('Server started on port '+ port);
