@@ -174,24 +174,73 @@ router.post('/addMembers', (req, res, next) => {
 // Needs user and a list of 0s and 1s
 router.post('/upadteAvailability', (req, res, next) => {
 
-    group_id = req.body.group_id
-    tempAvailabilities = req.body.availabilityArray
+    var counter = 0
 
-    console.log(tempAvailabilities.split(","))
+    group_id = req.body.group_id
+    availabilities = []
+
+    available = req.body.availabilityArray.split("").slice(1,-1)
+
+    console.log(available)
+
+    for (var odd_thing of available) {
+      if (counter%2 === 0) {
+        availabilities.push(Number(odd_thing))
+      }
+
+      counter++
+    }
+
+    console.log(availabilities)
 
 
     Group.getGroupById(group_id, (err, group) => {
       group.availabilities.push(availabilities)
-      group.save((err, data) => {
-        return res.json({
-          success: true,
-          msg: 'it worked',
-          group: group
-        })
-      })
+      if (group.list_of_invitees.length === 0 && group.list_of_users.length == group.availabilities.length) {
+        send_out_emails(group)
+      }
+      // group.save((err, data) => {
+      //   return res.json({
+      //     success: true,
+      //     msg: 'it worked',
+      //     group: group
+      //   })
+      // })
     })
 
+
+
 })
+
+function send_out_emails(group) {
+
+  console.log(group.list_of_users)
+
+  for (var emailee of group.list_of_users) {
+    console.log(emailee)
+    var mailOptions = {
+      from: 'anonymoose1997123@gmail.com',
+      to: emailee,
+      subject: "You've been invited to hangout with your friends on Unanimoose!",
+      text: 'unanimoose.com'
+    };
+  }
+
+
+
+  transporter.sendMail(mailOptions, function(error, info) {
+    if (error) {
+      console.log(error);
+    } else {
+      console.log('Email sent: ' + info);
+      return res.json({
+        success: true,
+        msg: "Group ID added to the user group array, and email has been sent",
+      })
+    }
+  });
+
+}
 
 // router.get('/testerthingy', (req, res, next) => {
 //
