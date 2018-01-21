@@ -19,14 +19,14 @@ const transporter = nodemailer.createTransport({
 
 // Create group, requires the user email as a string
 // requires name of the group
-// Requires list of invitees as a list of strings of emails
 router.post('/create', (req, res, next) => {
 
   owner_user = req.body.owner_user
+  console.log(req.body.group_name)
 
   let newGroup = new Group({
     name: req.body.group_name,
-    list_of_invitees: req.body.list_of_invitees,
+    list_of_invitees: [],
     list_of_users: [owner_user],
     state: 0,
     total_responses: 0

@@ -53,3 +53,29 @@ $('#loginForm').submit(function(e) {
   })
 
 });
+
+$('#groupNameForm').submit(function(e) {
+    e.preventDefault();
+    user_data = (JSON.parse(localStorage.getItem('user')))
+
+
+    console.log($('#groupNameForm').serialize() + "&email=" + user_data.email)
+
+
+    $.ajax({type : 'POST',
+    url : "http://localhost:3000/groups/create",
+    data : $('#groupNameForm').serialize() + "&owner_user=" + user_data.email,
+
+		success : function(data) {
+      console.log(data)
+      if (data.success) {
+        //localStorage.setItem('user', JSON.stringify(data.user))
+        //window.location.href = "/";
+
+      }
+      //localStorage.setItem('user', JSON.stringify(data.user))
+      //window.location.href = "/";
+    }
+  })
+
+});
