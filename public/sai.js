@@ -5,6 +5,7 @@ const days_of_week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "F
 // var day = days_of_week[new Date().getDay()];
 var day = new Date().getDay();
 
+
 //var box = '11';
 
 
@@ -80,17 +81,50 @@ for (var i = 0; i <= 6; i++) {
     number += 1;
 
 }
-//
-// for (var j =1; j <= 12; j++){
-//     for (var k = 1; k <= 7; k++){
-//         console.log(j + '' + k)
-//         if ($('input.checkbox_check:first-child').is(':checked')) {
-//             console.log("GOTTEEM");
-//         }
-//     }
-// }
-//
-// function my_function(my_param) {
-//     console.log(my_param);
-// }
-// my_function("test");
+
+
+//for (var j =1; j <= 12; j++){
+//    for (var k = 1; k <= 7; k++){
+        //console.log(document.getElementById(j+ "" +k).getElementsByClassName("icheckbox_flat-green"));
+        //console.log(document.getElementById(j+ "" +k).getElementsByClassName("icheckbox_flat-green"));
+        // if (document.getElementById(j+ "" +k).firstChild.checkbox_check.is(':checked')) {
+        //
+        //     console.log("yay");
+        // }
+        //  if ($('.checkbox_check:first-child').is(':checked')) {
+        //      console.log("GOTTEEM");
+        //  }
+     //}
+ //}
+
+ function my_function() {
+     console.log("------------------------------");
+     var tempArray = [];
+     for (var j =1; j <= 12; j++){
+         for (var k = 1; k <= 7; k++) {
+             //console.log($('#'+j+""+k).children().hasClass('checked'));
+             if($('#'+j+""+k).children().hasClass('checked')){
+                 console.log("CHECKED BOX: " + j + "" + k);
+                 tempArray.push(1);
+
+             } else {
+                 tempArray.push(0);
+             }
+         }
+     }
+
+     console.log(tempArray);
+
+
+
+ }
+
+//button.id = "fuk";
+//document.getElementById("fuk").addEventListener("click", my_function);
+
+//for (var j =1; j <= 12; j++){
+      //   for (var k = 1; k <= 7; k++){
+       //      if(document.getElementById(j+ "" +k).getElementsByClassName("icheckbox_flat-green").checked) {
+        //         console.log("CHECKED BOX: " + j + "" + k);
+         //    }
+        // }
