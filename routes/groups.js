@@ -8,6 +8,14 @@ const User = require('../models/user');
 
 const nodemailer = require('nodemailer');
 
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: 'anonymoose1997123@gmail.com',
+    pass: 'knucklesdragging'
+  }
+});
+
 
 // Create group, requires the user email as a string
 // requires name of the group
@@ -76,28 +84,23 @@ router.post('/addMembers', (req, res, next) => {
       user_object.group.push(group_id)
       console.log(user_object)
       user_object.save((err, user) => {
-        var transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-          user: 'zainkabster@gmail.com',
-          pass: ''
-        }
-      });
 
-      var mailOptions = {
-        from: 'zainkabster@gmail.com',
-        to: 'lors.kushtov@gmail.com',
-        subject: 'Sending nudes using Node.js',
-        text: 'That was easy!'
-      };
 
-      transporter.sendMail(mailOptions, function(error, info){
-        if (error) {
-          console.log(error);
-        } else {
-          console.log('Email sent: ' + info);
-        }
-      });
+        var mailOptions = {
+          from: 'anonymoose1997123@gmail.com',
+          to: 'zain.kabani97@gmail.com',
+          subject: 'Sending nudes using Node.js',
+          text: 'That was easy!'
+        };
+
+        transporter.sendMail(mailOptions, function(error, info) {
+          if (error) {
+            console.log(error);
+          } else {
+            console.log('Email sent: ' + info);
+          }
+        });
+
         return res.json({
           success: true,
           msg: "Group ID added to the user group array",
