@@ -102,8 +102,7 @@
               <ul class="nav navbar-nav navbar-right">
                 <li class="">
                   <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <img src="images/user.png" alt=""><span class="userName">John Doe</span>
-                    <span class=" fa fa-angle-down"></span>
+<img src="images/user.png" alt=""><span class="userName">John Doe</span>                    <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
                     <li><a href="javascript:;"> Profile</a></li>
@@ -200,7 +199,7 @@
                                   row.id = "row" + (i + 1);
                                   var cell = row.insertCell(0);
                                   cell.innerHTML = '<div class="input-group">'+
-                                                      '<input id="stock'+(i+1)+'" type="text" class="form-control" />'+
+                                                      '<input id="stock'+(i+1)+'" type="email" class="form-control" />'+
                                                       '<span class="input-group-btn">'+
                                                           '<button id="btn'+(i+1)+'" type="button" class="btn btn-primary" onclick="addRow(this)">'+
                                                               '<i  id="icon'+(i+1)+'" class="fa fa-plus" aria-hidden="true"></i>' +
@@ -228,11 +227,11 @@
                           <table class="table" id="myTable">
                               <thead>
                               </thead>
-                              <tbody>
+                              <tbody id="emailInviteList">
                                   <tr id="row0">
                                       <td>
                                           <div class="input-group">
-                                              <input id="stock0" type="text" class="form-control">
+                                              <input id="stock0" type="email" class="form-control">
                                               <span class="input-group-btn">
                                                   <button id="btn0" type="button" class="btn btn-primary" onclick="addRow(this)">
                                                     <i id="icon0" class="fa fa-plus" aria-hidden="true"></i>

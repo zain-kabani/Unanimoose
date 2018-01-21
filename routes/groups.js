@@ -54,6 +54,7 @@ router.post('/create', (req, res, next) => {
             return res.json({
               success: true,
               msg: "Group ID added to the user group array",
+              group: group
             })
           })
         }

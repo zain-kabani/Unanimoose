@@ -69,8 +69,9 @@ $('#groupNameForm').submit(function(e) {
 		success : function(data) {
       console.log(data)
       if (data.success) {
+        console.log(data.group._id)
         //localStorage.setItem('user', JSON.stringify(data.user))
-        //window.location.href = "/";
+        window.location.href = "/group?group_id=" + data.group._id;
 
       }
       //localStorage.setItem('user', JSON.stringify(data.user))
