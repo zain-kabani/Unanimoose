@@ -70,6 +70,11 @@ app.get('/CreateGroup', (req, res) => {
   res.sendFile(path.join(__dirname + '/front-end/production/create_group.html'));
 });
 
+// Voting Route
+app.get('/Vote', (req, res) => {
+  res.sendFile(path.join(__dirname + '/front-end/production/voting.html'));
+});
+
 // Login Route
 app.get('/login', (req, res) => {
   res.sendFile(path.join(__dirname + '/front-end/production/login.html'));
