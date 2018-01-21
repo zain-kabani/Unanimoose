@@ -5,7 +5,7 @@ const days_of_week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "F
 // var day = days_of_week[new Date().getDay()];
 var day = new Date().getDay();
 
-var box = '11';
+//var box = '11';
 
 
 
@@ -80,17 +80,17 @@ for (var i = 0; i <= 6; i++) {
     number += 1;
 
 }
-
-for (var j =1; j <= 12; j++){
-    for (var k = 1; k <= 7; k++){
-        console.log(j + '' + k)
-        if ($('input.checkbox_check:first-child').is(':checked')) {
-            console.log("GOTTEEM");
-        }
-    }
-}
-
-function my_function(my_param) {
-    console.log(my_param);
-}
-my_function("test");
+//
+// for (var j =1; j <= 12; j++){
+//     for (var k = 1; k <= 7; k++){
+//         console.log(j + '' + k)
+//         if ($('input.checkbox_check:first-child').is(':checked')) {
+//             console.log("GOTTEEM");
+//         }
+//     }
+// }
+//
+// function my_function(my_param) {
+//     console.log(my_param);
+// }
+// my_function("test");
