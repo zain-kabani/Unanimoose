@@ -38,6 +38,7 @@
             </div>
 
             <div class="clearfix"></div>
+            
 <!-- menu profile quick info -->
 <div class="profile clearfix">
     <div class="profile_pic">
@@ -61,8 +62,9 @@
         <li><a><i class="fa fa-home"></i> Home </a></li>
         <li><a><i class="fa fa-edit"></i> Groups <span class="fa fa-chevron-down"></span></a>
           <ul id="groups-menu" class="nav child_menu">
-            <!-- <li><a href="/group">Group 1</a></li>
-            <li><a href="/group?groupid=12345">Group 2</a></li> -->
+
+
+
           </ul>
         </li>
       </ul>
@@ -199,7 +201,7 @@
                                   row.id = "row" + (i + 1);
                                   var cell = row.insertCell(0);
                                   cell.innerHTML = '<div class="input-group">'+
-                                                      '<input id="stock'+(i+1)+'" type="email" class="form-control" />'+
+                                                      '<input id="stock'+(i+1)+'" type="email" class="form-control"   requiered=""/>'+
                                                       '<span class="input-group-btn">'+
                                                           '<button id="btn'+(i+1)+'" type="button" class="btn btn-primary" onclick="addRow(this)">'+
                                                               '<i  id="icon'+(i+1)+'" class="fa fa-plus" aria-hidden="true"></i>' +
@@ -231,7 +233,7 @@
                                   <tr id="row0">
                                       <td>
                                           <div class="input-group">
-                                              <input id="stock0" type="email" class="form-control">
+                                              <input id="stock0" type="email" class="form-control" requiered="" />
                                               <span class="input-group-btn">
                                                   <button id="btn0" type="button" class="btn btn-primary" onclick="addRow(this)">
                                                     <i id="icon0" class="fa fa-plus" aria-hidden="true"></i>
@@ -606,45 +608,45 @@
 
                                     </tr>
                                   </thead>
-                                  <tbody>
+                                  <tbody id="activity-body">
                                     <tr>
                                       <td>
-                           <th><input type="checkbox" id="check-all" class="flat"></th>
+                           <th><input id="activity" type="checkbox" id="check-all" class="flat"></th>
                           </td>
                                       <td>Bowling</td>
 
                                     </tr>
                                     <tr>
                                      <td>
-                           <th><input type="checkbox" id="check-all" class="flat"></th>
+                           <th><input id="activity" type="checkbox" id="check-all" class="flat"></th>
                           </td>
                                       <td>Chinese Food</td>
 
                                     </tr>
                                     <tr>
                           <td>
-                             <th><input type="checkbox" id="check-all" class="flat"></th>
+                             <th><input id="activity" type="checkbox" id="check-all" class="flat"></th>
                           </td>
                                       <td>Korean Food</td>
 
                                     </tr>
                                     <tr>
                                       <td>
-                           <th><input type="checkbox" id="check-all" class="flat"></th>
+                           <th><input id="activity" type="checkbox" id="check-all" class="flat"></th>
                           </td>
                                       <td>Escape Room</td>
 
                                     </tr>
                                     <tr>
                                       <td>
-                           <th><input type="checkbox" id="check-all" class="flat"></th>
+                           <th><input id="activity" type="checkbox" id="check-all" class="flat"></th>
                           </td>
                                       <td>Kareoke</td>
 
                                     </tr>
                                     <tr>
                                       <td>
-                           <th><input type="checkbox" id="check-all" class="flat"></th>
+                           <th><input id="activity" type="checkbox" id="check-all" class="flat"></th>
                           </td>
                                       <td>Shopping</td>
 

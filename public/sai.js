@@ -113,8 +113,25 @@ for (var i = 0; i <= 6; i++) {
          }
      }
 
-     console.log(tempArray);
+    // all of the emails
+     console.log("Hello lors");
+     var emailList = []
+     for(var i = 0; i <$("#emailInviteList")[0].children.length; i++    ){
+         
+        emailList.push(document.getElementById("stock"+i).value);
+     }
+     console.log(emailList);
 
+     var activityList = []
+
+     for(var i = 0; i < (document.getElementsByClassName("selected").length - 2); i++    ){
+         if ($("#datatable-checkbox").children().hasClass('selected')) {
+
+            activityList.push(document.getElementsByClassName("selected")[i].children[2].innerHTML);
+            
+         }
+     }
+     console.log(activityList);
 
 
  }
