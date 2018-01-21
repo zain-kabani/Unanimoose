@@ -10,3 +10,5 @@ if (user_data.group.length === 0) {
     console.log(group)
   }
 }
+
+console.log($('.userName').text(user_data.email))

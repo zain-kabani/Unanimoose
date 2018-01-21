@@ -19,7 +19,7 @@
     <!-- Custom Theme Style -->
     <link href="build/css/custom.min.css" rel="stylesheet">
 
-    
+
   </head>
 
   <body class="nav-md">
@@ -40,7 +40,7 @@
               </div>
               <div class="profile_info">
                 <span>Welcome,</span>
-                <h2>John Doe</h2>
+                <h2 class="userName" >John Doe</h2>
               </div>
               <div class="clearfix"></div>
             </div>
@@ -55,14 +55,14 @@
                 <ul class="nav side-menu">
                   <li><a><i class="fa fa-home"></i> Home </a></li>
                   <li><a><i class="fa fa-edit"></i> Groups <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="/group">Group 1</a></li>
-                      <li><a href="/group">Group 2</a></li>
+                    <ul id="groups-menu" class="nav child_menu">
+                      <!-- <li><a href="/group">Group 1</a></li>
+                      <li><a href="/group?groupid=12345">Group 2</a></li> -->
                     </ul>
                   </li>
                 </ul>
               </div>
-              
+
 
             </div>
             <!-- /sidebar menu -->
@@ -97,7 +97,7 @@
               <ul class="nav navbar-nav navbar-right">
                 <li class="">
                   <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <img src="images/user.png" alt="">John Doe
+                    <img src="images/user.png" alt=""><span class="userName">John Doe</span>
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
@@ -113,7 +113,7 @@
                   </ul>
                 </li>
 
-              
+
               </ul>
             </nav>
           </div>
@@ -146,26 +146,26 @@
                 <div class="x_panel">
                   <div class="x_title">
                     <h2>Group Creation <small>Name the group</small></h2>
-             
+
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
                     <br>
-                    <form id="demo-form2" data-parsley-validate="" class="form-horizontal form-label-left" novalidate="">
+                    <form id="groupNameForm" name='groupNameForm' method='post' action="http://localhost:3000/groups/create" class="form-horizontal form-label-left">
 
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Name <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12">
+                          <input id="group_name" type="text" class="form-control col-md-7 col-xs-12" name="group_name" placeholder="group_name" required="">
                         </div>
                       </div>
-                      
+
                       <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
                           <a href="/" class="btn btn-primary" type="button">Cancel</a>
-                          <a href="/group" type="submit" class="btn btn-success">Submit</a>
+                          <button class="btn btn-default submit" type="submit" >Submit</button>
                         </div>
                       </div>
 
@@ -196,8 +196,12 @@
     <script src="vendors/fastclick/lib/fastclick.js"></script>
     <!-- NProgress -->
     <script src="vendors/nprogress/nprogress.js"></script>
-    
+
     <!-- Custom Theme Scripts -->
     <script src="build/js/custom.min.js"></script>
+    <script src="menu.js"></script>
+    <script src="zain.js"></script>
+
+
   </body>
 </html>

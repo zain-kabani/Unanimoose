@@ -45,7 +45,7 @@
     </div>
     <div class="profile_info">
       <span>Welcome,</span>
-      <h2>John Doe</h2>
+      <h2 class="userName" >John Doe</h2>
     </div>
     <div class="clearfix"></div>
   </div>
@@ -60,14 +60,14 @@
       <ul class="nav side-menu">
         <li><a><i class="fa fa-home"></i> Home </a></li>
         <li><a><i class="fa fa-edit"></i> Groups <span class="fa fa-chevron-down"></span></a>
-          <ul class="nav child_menu">
-            <li><a href="/group">Group 1</a></li>
-            <li><a href="/group">Group 2</a></li>
+          <ul id="groups-menu" class="nav child_menu">
+            <!-- <li><a href="/group">Group 1</a></li>
+            <li><a href="/group?groupid=12345">Group 2</a></li> -->
           </ul>
         </li>
       </ul>
     </div>
-    
+
 
   </div>
   <!-- /sidebar menu -->
@@ -102,8 +102,7 @@
               <ul class="nav navbar-nav navbar-right">
                 <li class="">
                   <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <img src="images/user.png" alt="">John Doe
-                    <span class=" fa fa-angle-down"></span>
+<img src="images/user.png" alt=""><span class="userName">John Doe</span>                    <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
                     <li><a href="javascript:;"> Profile</a></li>
@@ -118,7 +117,7 @@
                   </ul>
                 </li>
 
-              
+
               </ul>
             </nav>
           </div>
@@ -152,7 +151,7 @@
                 <div class="x_panel">
                   <div class="x_title">
                     <h2>Group Creation</h2>
-                    
+
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
@@ -200,7 +199,7 @@
                                   row.id = "row" + (i + 1);
                                   var cell = row.insertCell(0);
                                   cell.innerHTML = '<div class="input-group">'+
-                                                      '<input id="stock'+(i+1)+'" type="text" class="form-control" />'+
+                                                      '<input id="stock'+(i+1)+'" type="email" class="form-control" />'+
                                                       '<span class="input-group-btn">'+
                                                           '<button id="btn'+(i+1)+'" type="button" class="btn btn-primary" onclick="addRow(this)">'+
                                                               '<i  id="icon'+(i+1)+'" class="fa fa-plus" aria-hidden="true"></i>' +
@@ -209,7 +208,7 @@
                                                    '</div>';
                                   $('#btn'+i).attr('onclick', 'remRow(this)');
                                 }
-                        
+
                                 function remRow(input) {
                                   var table = document.getElementById("myTable");
                                   var i = parseInt(input.id.substring(3, input.id.length));
@@ -217,7 +216,7 @@
                                   table.deleteRow(ind);
                                 }
                                 </script>
-                                
+
                           <div class="x_panel" style="height:300px;">
                               <div class="x_title">
                                   <h2>Invite Members to this Group <small>Add their emails</small></h2>
@@ -228,11 +227,11 @@
                           <table class="table" id="myTable">
                               <thead>
                               </thead>
-                              <tbody>
+                              <tbody id="emailInviteList">
                                   <tr id="row0">
                                       <td>
                                           <div class="input-group">
-                                              <input id="stock0" type="text" class="form-control">
+                                              <input id="stock0" type="email" class="form-control">
                                               <span class="input-group-btn">
                                                   <button id="btn0" type="button" class="btn btn-primary" onclick="addRow(this)">
                                                     <i id="icon0" class="fa fa-plus" aria-hidden="true"></i>
@@ -251,12 +250,12 @@
                           <div class="x_panel">
                               <div class="x_title">
                                 <h2>Select Your Availability Below <!--<small>Custom design</small>--></h2>
-                                
+
                                 <div class="clearfix"></div>
                               </div>
-              
+
                               <div class="x_content">
-              
+
                                 <table class="table table-striped responsive-utilities jambo_table">
                                   <thead>
                                   <tr id="days_of_week" class="headings">
@@ -578,9 +577,9 @@
                                       <input type="checkbox" class="flat" name="table_records">
                                     </td>
                                   </tr>
-              
+
                                   </tbody>
-              
+
                                 </table>
                               </div>
                             </div>
@@ -592,7 +591,7 @@
                           <div class="x_panel">
                               <div class="x_title">
                                   <h2>Activities <small>Select the activities you would like to do</small></h2>
-                                  
+
                                   <div class="clearfix"></div>
                                 </div>
                               <div class="x_content">
@@ -604,7 +603,7 @@
                            <th><input type="checkbox" id="check-all" class="flat"></th>
                           </th>
                                       <th>Name</th>
-  
+
                                     </tr>
                                   </thead>
                                   <tbody>
@@ -613,7 +612,7 @@
                            <th><input type="checkbox" id="check-all" class="flat"></th>
                           </td>
                                       <td>Bowling</td>
- 
+
                                     </tr>
                                     <tr>
                                      <td>
@@ -627,7 +626,7 @@
                              <th><input type="checkbox" id="check-all" class="flat"></th>
                           </td>
                                       <td>Korean Food</td>
-   
+
                                     </tr>
                                     <tr>
                                       <td>
@@ -650,7 +649,7 @@
                                       <td>Shopping</td>
 
                                     </tr>
-                                    
+
                                   </tbody>
                                 </table>
                               </div>
@@ -663,7 +662,7 @@
 
                     </div>
                     <!-- End SmartWizard Content -->
-                    
+
                   </div>
                 </div>
               </div>
@@ -714,6 +713,9 @@
         <script src="vendors/pdfmake/build/pdfmake.min.js"></script>
         <script src="vendors/pdfmake/build/vfs_fonts.js"></script>
         <script src="sai.js"></script>
-	
+
+        <script src="menu.js"></script>
+
+
   </body>
 </html>

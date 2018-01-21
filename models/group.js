@@ -33,7 +33,7 @@ const Group = module.exports = mongoose.model('Group', GroupSchema);
 
 module.exports.publishGroup = function(group, callback){
   //console.log('wete')
-    group.save(callback);
+  group.save(callback);
 }
 
 module.exports.getUsersListings = function(username, callback){
