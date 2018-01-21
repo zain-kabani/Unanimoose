@@ -26,7 +26,7 @@ const app = express();
 
 const users = require('./routes/users');
 const groups = require('./routes/groups');
-const availabilities = require('./routes/availabilities');
+const votes = require('./routes/votes');
 
 
 
@@ -52,7 +52,7 @@ require('./config/passport')(passport);
 
 app.use('/users', users);
 app.use('/groups', groups);
-app.use('/availabilities', availabilities);
+app.use('/votes', votes);
 
 
 // Index Route

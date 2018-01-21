@@ -21,7 +21,8 @@ const GroupSchema = mongoose.Schema({
   total_responses: {
     type: Number,
     default: 0
-  }
+  },
+  availabilities: []
 
 });
 

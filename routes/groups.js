@@ -170,41 +170,16 @@ router.post('/addMembers', (req, res, next) => {
 // });
 
 
-router.post('/tester', (req, res, next) => {
 
+// Needs user and a list of 0s and 1s
+router.post('/upadteAvailability', (req, res, next) => {
 
-  // let transporter = nodemailer.createTransport({
-  //   host: 'smtp.ethereal.email',
-  //   port: 587,
-  //   auth: {
-  //     user: 'izebyt7uvyjuvxf2@ethereal.email',
-  //     pass: 'nfxGpZzc5AutMUgDpE'
-  //   }
-  // })
-  //
-  // var message = {
-  //   from: 'izebyt7uvyjuvxf2@ethereal.email',
-  //   to: 'zainkabster@gmail.com',
-  //   subject: 'Message title',
-  //   text: 'Plaintext version of the message',
-  //   html: '<p>HTML version of the message</p>'
-  // };
-  //
-  // // send mail with defined transport object
-  // transporter.sendMail(message, (error, info) => {
-  //   if (error) {
-  //     return console.log(error);
-  //   }
-  //   console.log('Message sent: %s', info.messageId);
-  //   // Preview only available when sending through an Ethereal account
-  //   console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
-  //
-  // transporter.close();
-  //
-  //
-  //   // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@blurdybloop.com>
-  //   // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
-  // });
+    group_id = req.body.group_id
+    availabilities = req.body.availabilityArray
+
+    Group.getGroupById(group_id, (err, group) => {
+      group.availabilities.push()
+    })
 
 })
 

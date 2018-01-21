@@ -3,12 +3,18 @@ const router = express.Router();
 const passport = require('passport');
 const jwt = require('jsonwebtoken');
 const config = require('../config/database');
-const Availability = require('../models/availability');
+const Vote = require('../models/vote');
+const Group = require('../models/group');
 
 // var formidable = require('formidable')
 
 
 // Register
+
+// router.post('/spitUpTop3', (req, res, next) => {
+//
+// })
+
 router.post('/create', (req, res, next) => {
 
   // let newGroup = new Group({

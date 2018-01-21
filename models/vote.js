@@ -4,11 +4,11 @@ const mongoose = require('mongoose');
 //const Schema = mongoose.Scehma;
 
 // User Schema
-const AvailabilitySchema = mongoose.Schema({
+const VoteSchema = mongoose.Schema({
   group: Object
 });
 
-const Availability = module.exports = mongoose.model('Availability', AvailabilitySchema);
+const Vote = module.exports = mongoose.model('Vote', VoteSchema);
 
 
 module.exports.getUserById = function(id, callback){
