@@ -25,7 +25,7 @@ router.post('/create', (req, res, next) => {
   owner_user = req.body.owner_user
 
   let newGroup = new Group({
-    name: req.body.name,
+    name: req.body.group_name,
     list_of_invitees: req.body.list_of_invitees,
     list_of_users: [owner_user],
     state: 0,
@@ -75,7 +75,7 @@ router.post('/create', (req, res, next) => {
 // Send invitees as a list of strings of emails of users with accounts called invitees
 // also send the group ID as a string called group_id
 router.post('/addMembers', (req, res, next) => {
-  const invitees = req.body.invitees;
+  const invitees = req.body.list_of_invitees;
   const group_id = req.body.group_id;
   invitee_users = []
 
@@ -158,14 +158,14 @@ router.post('/addMembers', (req, res, next) => {
 });
 
 // Profile
-router.get('/profile', passport.authenticate('jwt', {
-  session: false
-}), (req, res, next) => {
-
-  res.json({
-    user: req.user
-  });
-});
+// router.get('/', passport.authenticate('jwt', {
+//   session: false
+// }), (req, res, next) => {
+//
+//   res.json({
+//     user: req.user
+//   });
+// });
 
 
 router.post('/tester', (req, res, next) => {
