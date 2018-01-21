@@ -6,7 +6,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="indexing.js"></script>
 
     <title>Unanimoose</title>
 
@@ -52,11 +51,11 @@
               <div class="menu_section">
                 <h3>General</h3>
                 <ul class="nav side-menu">
-                  <li><a><i class="fa fa-home"></i> Home</a></li>
+                  <li><a href='/'><i class="fa fa-home"></i> Home</a></li>
                   <li><a><i class="fa fa-edit"></i> Groups <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="/group">Group 1</a></li>
-                      <li><a href="/group?groupid=12345">Group 2</a></li>
+                    <ul id="groups-menu" class="nav child_menu">
+                      <!-- <li><a href="/group">Group 1</a></li>
+                      <li><a href="/group?groupid=12345">Group 2</a></li> -->
                     </ul>
                   </li>
                 </ul>
@@ -222,6 +221,8 @@
     <script src="vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
     <!-- Custom Theme Scripts -->
     <script src="build/js/custom.min.js"></script>
+
+    <script src="menu.js"></script>
 
   </body>
 </html>

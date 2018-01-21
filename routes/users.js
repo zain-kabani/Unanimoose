@@ -63,7 +63,8 @@ router.post('/authenticate', (req, res, next) => {
       if (user.password == password) {
         return res.json({
           success: true,
-          msg: 'User found, and valid password'
+          msg: 'User found, and valid password',
+          user: user
         });
       } else {
         return res.json({
