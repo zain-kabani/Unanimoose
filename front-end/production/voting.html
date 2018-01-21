@@ -15,9 +15,11 @@
     <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress -->
     <link href="vendors/nprogress/nprogress.css" rel="stylesheet">
-    <link href="vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+
     <!-- Custom Theme Style -->
     <link href="build/css/custom.min.css" rel="stylesheet">
+
+    
   </head>
 
   <body class="nav-md">
@@ -51,16 +53,16 @@
               <div class="menu_section">
                 <h3>General</h3>
                 <ul class="nav side-menu">
-                  <li><a href='/'><i class="fa fa-home"></i> Home</a></li>
+                  <li><a><i class="fa fa-home"></i> Home </a></li>
                   <li><a><i class="fa fa-edit"></i> Groups <span class="fa fa-chevron-down"></span></a>
-                    <ul id="groups-menu" class="nav child_menu">
-                      <!-- <li><a href="/group">Group 1</a></li>
-                      <li><a href="/group?groupid=12345">Group 2</a></li> -->
+                    <ul class="nav child_menu">
+                      <li><a href="/group">Group 1</a></li>
+                      <li><a href="/group">Group 2</a></li>
                     </ul>
                   </li>
                 </ul>
               </div>
-
+              
 
             </div>
             <!-- /sidebar menu -->
@@ -111,7 +113,7 @@
                   </ul>
                 </li>
 
-
+              
               </ul>
             </nav>
           </div>
@@ -119,81 +121,39 @@
         <!-- /top navigation -->
 
         <!-- page content -->
-        <div class="right_col" role="main">
+        <div class="right_col" role="main" style="height: 750px">
           <div class="">
             <div class="page-title">
-                <div class="title_left">
-                    <h3>Dashboard</h3>
+              <div class="title_left">
+                <h3>Group Name</h3>
+              </div>
+
+              <!-- <div class="title_right">
+                <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search for...">
+                    <span class="input-group-btn">
+                      <button class="btn btn-default" type="button">Go!</button>
+                    </span>
                   </div>
-
-
+                </div>
+              </div> -->
             </div>
 
             <div class="clearfix"></div>
 
-            <div class="row">
-              <div class="col-md-12 col-sm-12 col-xs-12">
-                <div class="x_panel" style="height:900px">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
                   <div class="x_title">
-
-                      <div class="clearfix"></div>
+                    <h2>Vote<small>Vote on time and activity</small></h2>
+             
+                    <div class="clearfix"></div>
                   </div>
-
                   <div class="x_content">
-
-                      <a href="/CreateGroup" type="button" class="btn btn-success btn-lg">
-                          <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Create New Group
-                      </a>
-                      <hr>
-
-                      <div class="x_panel"  style="height: auto;">
-                          <div class="x_title">
-                            <h2>Group 1</h2>
-                            <ul class="nav navbar-right panel_toolbox">
-                                <li><a class="collapse-link"><i class="fa fa-chevron-down"></i></a>
-                                </li>
-                              </ul>
-                            <div class="clearfix"></div>
-                          </div>
-                          <div class="x_content"  style="display: none;">
-                              <div class="col-md-3">
-                                  <div class="panel-body">
-                                      <table class="table table-striped">
-                                        <thead>
-                                          <tr>
-                                            <th>Name</th>
-                                          </tr>
-                                        </thead>
-                                        <tbody>
-                                          <tr>
-                                            <td>User 1</td>
-                                          </tr>
-                                          <tr>
-                                              <td>User 2</td>
-                                          </tr>
-                                            <tr>
-                                                <td>User 3</td>
-                                          </tr>
-                                        </tbody>
-                                      </table>
-                                    </div>
-                                  </div>
-                                  <div class="col-md-5">
-                                    Number of users voted:
-                                    <div class="progress">
-                                        <div class="progress-bar progress-bar-info" data-transitiongoal="65" aria-valuenow="65" style="width: 65%;"></div>
-                                      </div>
-                                  </div>
-                                  <div class"col-md-4">
-                                            <a href="/Group" type="button" class="btn btn-success"> EDIT </a>
-                                            <a type="button" class="btn btn-danger"> Leave Group </a>
-                                  </div>
-                                </div>
-                        </div>
+                    
                   </div>
                 </div>
               </div>
-            </div>
           </div>
         </div>
         <!-- /page content -->
@@ -217,12 +177,7 @@
     <script src="vendors/fastclick/lib/fastclick.js"></script>
     <!-- NProgress -->
     <script src="vendors/nprogress/nprogress.js"></script>
-
-    <script src="vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
     <!-- Custom Theme Scripts -->
     <script src="build/js/custom.min.js"></script>
-
-    <script src="menu.js"></script>
-
   </body>
 </html>
