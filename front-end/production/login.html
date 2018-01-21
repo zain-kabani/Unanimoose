@@ -64,19 +64,19 @@
 
         <div id="register" class="animate form registration_form">
           <section class="login_content">
-            <form>
+            <form id="registerForm" name='register' method='post' class='register' action="http://localhost:3000/users/register">
               <h1>Create Account</h1>
               <div>
-                <input type="text" class="form-control" placeholder="Username" required="" />
+                <input id="regName" type="text" class="form-control" name="name" placeholder="name" required="" />
               </div>
               <div>
-                <input type="email" class="form-control" placeholder="Email" required="" />
+                <input id="regEmail" type="email" class="form-control" name="email" placeholder="Email" required="" />
               </div>
               <div>
-                <input type="password" class="form-control" placeholder="Password" required="" />
+                <input id="regPassword" type="password" class="form-control" name="password" placeholder="Password" required="" />
               </div>
               <div>
-                <a class="btn btn-default submit" href="/">Submit</a>
+                <button class="btn btn-default submit" type="submit" >Submit</button>
               </div>
 
               <div class="clearfix"></div>
@@ -99,5 +99,8 @@
         </div>
       </div>
     </div>
+    <script src="vendors/jquery/dist/jquery.min.js"></script>
+    <script src="zain.js"></script>
+
   </body>
 </html>

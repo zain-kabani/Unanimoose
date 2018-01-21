@@ -10,6 +10,7 @@ const User = require('../models/user');
 
 // Register
 router.post('/register', (req, res, next) => {
+  console.log(req.body)
 
   let newUser = new User({
     name: req.body.name,
@@ -34,7 +35,8 @@ router.post('/register', (req, res, next) => {
         } else {
           return res.json({
             success: true,
-            msg: 'User registered'
+            msg: 'User registered',
+            user: user
           })
         }
       })
