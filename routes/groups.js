@@ -175,10 +175,20 @@ router.post('/addMembers', (req, res, next) => {
 router.post('/upadteAvailability', (req, res, next) => {
 
     group_id = req.body.group_id
-    availabilities = req.body.availabilityArray
+    tempAvailabilities = req.body.availabilityArray
+
+    console.log(tempAvailabilities.split(","))
+
 
     Group.getGroupById(group_id, (err, group) => {
-      group.availabilities.push()
+      group.availabilities.push(availabilities)
+      group.save((err, data) => {
+        return res.json({
+          success: true,
+          msg: 'it worked',
+          group: group
+        })
+      })
     })
 
 })
