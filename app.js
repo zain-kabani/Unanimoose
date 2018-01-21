@@ -57,7 +57,7 @@ app.use('/availabilities', availabilities);
 
 // Index Route
 app.get('/', (req, res) => {
-  res.send('Invalid Endpoint');
+  res.sendFile(path.join(__dirname + '/front-end/production/index.html'));
 });
 
 // Start Server

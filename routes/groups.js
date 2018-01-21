@@ -89,8 +89,8 @@ router.post('/addMembers', (req, res, next) => {
         var mailOptions = {
           from: 'anonymoose1997123@gmail.com',
           to: 'zain.kabani97@gmail.com',
-          subject: 'Sending nudes using Node.js',
-          text: 'That was easy!'
+          subject: "You've been invited to hangout with your friends on Unanimoose!",
+          text: 'unanimoose.com'
         };
 
         transporter.sendMail(mailOptions, function(error, info) {
@@ -98,13 +98,14 @@ router.post('/addMembers', (req, res, next) => {
             console.log(error);
           } else {
             console.log('Email sent: ' + info);
+            return res.json({
+              success: true,
+              msg: "Group ID added to the user group array, and email has been sent",
+            })
           }
         });
 
-        return res.json({
-          success: true,
-          msg: "Group ID added to the user group array",
-        })
+
       })
 
 
