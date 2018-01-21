@@ -1,4 +1,8 @@
 # Unanimoose!
+
+
+<img src="Logo.png" alt="test" width = "40%">
+
 <h1> What is this? </h1>
 <p> Unanimoose is a social scheduling web app, that not only sets up your plans but creates and plans optimal times as well as events for social gatherings. This targets a big problem we face today, where many people are too lazy or forgetful to keep track of friends that they need to catch up with. This app takes in your availability and interests and integrates them with your friends for a perfect plan but in an easy way, with a clean look. It does all the grunt work for you, almost as if it was done Unanimosely!</p>
 
@@ -10,3 +14,5 @@
 
 <h1> Scalability and Potential </h1>
 <p> This web app has tremendous potential that can be scaled effortlessly. This is a very thoughtful idea that can easily gain traction and change the way social gatherings happen, benefitting many. Machine learning can be implemented in order to track data of the meet ups in order to suggest better plans for the future as well as improve the app overall. This app can also take over many other categories if grown properly, for example reviewing places to hang out, could be something done by this app. In general this deals with a large problem that has affected almost everyone, so having a solution to this would save people a lot of time as well make plans more consistent.
+
+<p> © Sai Oduri, Lors Kushtov, and Zain Kabani </p>
