@@ -1,723 +1,725 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!-- Meta, title, CSS, favicons, etc. -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Unanimoose </title>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- Meta, title, CSS, favicons, etc. -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap -->
-    <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <!-- NProgress -->
-    <link href="vendors/nprogress/nprogress.css" rel="stylesheet">
-    <!-- iCheck -->
-    <link href="vendors/iCheck/skins/flat/green.css" rel="stylesheet">
-    <!-- Datatables -->
-    <link href="vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
-    <link href="vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
-    <link href="vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
-    <link href="vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
-    <link href="vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
+  <title>Unanimoose </title>
 
-    <!-- Custom Theme Style -->
-    <link href="build/css/custom.min.css" rel="stylesheet">
-  </head>
+  <!-- Bootstrap -->
+  <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <!-- NProgress -->
+  <link href="vendors/nprogress/nprogress.css" rel="stylesheet">
+  <!-- iCheck -->
+  <link href="vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+  <!-- Datatables -->
+  <link href="vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
+  <link href="vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
+  <link href="vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
+  <link href="vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
+  <link href="vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
 
-  <body class="nav-md">
-    <div class="container body">
-      <div class="main_container">
-        <div class="col-md-3 left_col">
-          <div class="left_col scroll-view">
-            <div class="navbar nav_title" style="border: 0;">
-              <a href="/" class="site_title"><i class="fa fa-paw"></i> <span>Unanimoose</span></a>
+  <!-- Custom Theme Style -->
+  <link href="build/css/custom.min.css" rel="stylesheet">
+</head>
+
+<body class="nav-md">
+  <div class="container body">
+    <div class="main_container">
+      <div class="col-md-3 left_col">
+        <div class="left_col scroll-view">
+          <div class="navbar nav_title" style="border: 0;">
+            <a href="/" class="site_title"><i class="fa fa-paw"></i> <span>Unanimoose</span></a>
+          </div>
+
+          <div class="clearfix"></div>
+
+          <!-- menu profile quick info -->
+          <div class="profile clearfix">
+            <div class="profile_pic">
+              <img src="images/user.png" alt="..." class="img-circle profile_img">
+            </div>
+            <div class="profile_info">
+              <span>Welcome,</span>
+              <h2 class="userName">John Doe</h2>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <!-- /menu profile quick info -->
+
+          <br />
+
+          <!-- sidebar menu -->
+          <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+            <div class="menu_section">
+              <h3>General</h3>
+              <ul class="nav side-menu">
+                <li><a><i class="fa fa-home"></i> Home </a></li>
+                <li><a><i class="fa fa-edit"></i> Groups <span class="fa fa-chevron-down"></span></a>
+                  <ul id="groups-menu" class="nav child_menu">
+
+
+
+                  </ul>
+                </li>
+              </ul>
             </div>
 
-            <div class="clearfix"></div>
-            
-<!-- menu profile quick info -->
-<div class="profile clearfix">
-    <div class="profile_pic">
-      <img src="images/user.png" alt="..." class="img-circle profile_img">
-    </div>
-    <div class="profile_info">
-      <span>Welcome,</span>
-      <h2 class="userName" >John Doe</h2>
-    </div>
-    <div class="clearfix"></div>
-  </div>
-  <!-- /menu profile quick info -->
 
-  <br />
+          </div>
+          <!-- /sidebar menu -->
 
-  <!-- sidebar menu -->
-  <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
-    <div class="menu_section">
-      <h3>General</h3>
-      <ul class="nav side-menu">
-        <li><a><i class="fa fa-home"></i> Home </a></li>
-        <li><a><i class="fa fa-edit"></i> Groups <span class="fa fa-chevron-down"></span></a>
-          <ul id="groups-menu" class="nav child_menu">
-
-
-
-          </ul>
-        </li>
-      </ul>
-    </div>
-
-
-  </div>
-  <!-- /sidebar menu -->
-
-            <!-- /menu footer buttons -->
-            <div class="sidebar-footer hidden-small">
-              <a data-toggle="tooltip" data-placement="top" title="Settings">
+          <!-- /menu footer buttons -->
+          <div class="sidebar-footer hidden-small">
+            <a data-toggle="tooltip" data-placement="top" title="Settings">
                 <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
               </a>
-              <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+            <a data-toggle="tooltip" data-placement="top" title="FullScreen">
                 <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
               </a>
-              <a data-toggle="tooltip" data-placement="top" title="Lock">
+            <a data-toggle="tooltip" data-placement="top" title="Lock">
                 <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
               </a>
-              <a data-toggle="tooltip" data-placement="top" title="Logout" href="/login">
+            <a data-toggle="tooltip" data-placement="top" title="Logout" href="/login">
                 <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
               </a>
-            </div>
-            <!-- /menu footer buttons -->
           </div>
+          <!-- /menu footer buttons -->
         </div>
+      </div>
 
-        <!-- top navigation -->
-        <div class="top_nav">
-          <div class="nav_menu">
-            <nav>
-              <div class="nav toggle">
-                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
-              </div>
+      <!-- top navigation -->
+      <div class="top_nav">
+        <div class="nav_menu">
+          <nav>
+            <div class="nav toggle">
+              <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+            </div>
 
-              <ul class="nav navbar-nav navbar-right">
-                <li class="">
-                  <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+            <ul class="nav navbar-nav navbar-right">
+              <li class="">
+                <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
 <img src="images/user.png" alt=""><span class="userName">John Doe</span>                    <span class=" fa fa-angle-down"></span>
                   </a>
-                  <ul class="dropdown-menu dropdown-usermenu pull-right">
-                    <li><a href="javascript:;"> Profile</a></li>
-                    <li>
-                      <a href="javascript:;">
+                <ul class="dropdown-menu dropdown-usermenu pull-right">
+                  <li><a href="javascript:;"> Profile</a></li>
+                  <li>
+                    <a href="javascript:;">
                         <span class="badge bg-red pull-right">50%</span>
                         <span>Settings</span>
                       </a>
-                    </li>
-                    <li><a href="javascript:;">Help</a></li>
-                    <li><a href="/login"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
-                  </ul>
-                </li>
+                  </li>
+                  <li><a href="javascript:;">Help</a></li>
+                  <li><a href="/login"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                </ul>
+              </li>
 
 
-              </ul>
-            </nav>
-          </div>
+            </ul>
+          </nav>
         </div>
-        <!-- /top navigation -->
+      </div>
+      <!-- /top navigation -->
 
-        <!-- page content -->
-        <div class="right_col" role="main">
-          <div class="">
-            <div class="page-title">
-              <div class="title_left">
-                <h3>Group 1</h3>
-              </div>
+      <!-- page content -->
+      <div class="right_col" role="main">
+        <div class="">
+          <div class="page-title">
+            <div class="title_left">
+              <h3>Group 1</h3>
+            </div>
 
-              <div class="title_right">
-                <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
-                  <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search for...">
-                    <span class="input-group-btn">
+            <div class="title_right">
+              <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Search for...">
+                  <span class="input-group-btn">
                               <button class="btn btn-default" type="button">Go!</button>
                           </span>
-                  </div>
                 </div>
               </div>
             </div>
-            <div class="clearfix"></div>
+          </div>
+          <div class="clearfix"></div>
 
-            <div class="row">
+          <div class="row">
 
-              <div class="col-md-12 col-sm-12 col-xs-12">
-                <div class="x_panel">
-                  <div class="x_title">
-                    <h2>Group Creation</h2>
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="x_panel">
+                <div class="x_title">
+                  <h2>Group Creation</h2>
 
-                    <div class="clearfix"></div>
-                  </div>
-                  <div class="x_content">
+                  <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
 
 
-                    <!-- Smart Wizard -->
-                    <div id="wizard" class="form_wizard wizard_horizontal">
-                      <ul class="wizard_steps">
-                        <li>
-                          <a href="#step-1">
+                  <!-- Smart Wizard -->
+                  <div id="wizard" class="form_wizard wizard_horizontal">
+                    <ul class="wizard_steps">
+                      <li>
+                        <a href="#step-1">
                             <span class="step_no">1</span>
                             <span class="step_descr">
                                               Step 1<br />
                                               <small>Invite Members</small>
                                           </span>
                           </a>
-                        </li>
-                        <li>
-                          <a href="#step-2">
+                      </li>
+                      <li>
+                        <a href="#step-2">
                             <span class="step_no">2</span>
                             <span class="step_descr">
                                               Step 2<br />
                                               <small>Availability</small>
                                           </span>
                           </a>
-                        </li>
-                        <li>
-                          <a href="#step-3">
+                      </li>
+                      <li>
+                        <a href="#step-3">
                             <span class="step_no">3</span>
                             <span class="step_descr">
                                               Step 3<br />
                                               <small>Activities</small>
                                           </span>
                           </a>
-                        </li>
+                      </li>
 
-                      </ul>
-                      <div id="step-1">
-                          <script>
-                              function addRow(input) {
-                                  var table = document.getElementById("myTable");
-                                  var i = parseInt(input.id.substring(3, input.id.length));
-                                  document.getElementById('icon' + i).className = "fa fa-minus";
-                                  var row = table.insertRow(table.rows.length);
-                                  row.id = "row" + (i + 1);
-                                  var cell = row.insertCell(0);
-                                  cell.innerHTML = '<div class="input-group">'+
-                                                      '<input id="stock'+(i+1)+'" type="email" class="form-control"   requiered=""/>'+
-                                                      '<span class="input-group-btn">'+
-                                                          '<button id="btn'+(i+1)+'" type="button" class="btn btn-primary" onclick="addRow(this)">'+
-                                                              '<i  id="icon'+(i+1)+'" class="fa fa-plus" aria-hidden="true"></i>' +
-                                                          '</button>'+
-                                                      '</span>'+
-                                                   '</div>';
-                                  $('#btn'+i).attr('onclick', 'remRow(this)');
-                                }
+                    </ul>
+                    <div id="step-1">
+                      <script>
+                        function addRow(input) {
+                          var table = document.getElementById("myTable");
+                          var i = parseInt(input.id.substring(3, input.id.length));
+                          document.getElementById('icon' + i).className = "fa fa-minus";
+                          var row = table.insertRow(table.rows.length);
+                          row.id = "row" + (i + 1);
+                          var cell = row.insertCell(0);
+                          cell.innerHTML = '<div class="input-group">' +
+                            '<input id="stock' + (i + 1) + '" type="email" class="form-control"   requiered=""/>' +
+                            '<span class="input-group-btn">' +
+                            '<button id="btn' + (i + 1) + '" type="button" class="btn btn-primary" onclick="addRow(this)">' +
+                            '<i  id="icon' + (i + 1) + '" class="fa fa-plus" aria-hidden="true"></i>' +
+                            '</button>' +
+                            '</span>' +
+                            '</div>';
+                          $('#btn' + i).attr('onclick', 'remRow(this)');
+                        }
 
-                                function remRow(input) {
-                                  var table = document.getElementById("myTable");
-                                  var i = parseInt(input.id.substring(3, input.id.length));
-                                  var ind = table.rows["row" +i].rowIndex;
-                                  table.deleteRow(ind);
-                                }
-                                </script>
+                        function remRow(input) {
+                          var table = document.getElementById("myTable");
+                          var i = parseInt(input.id.substring(3, input.id.length));
+                          var ind = table.rows["row" + i].rowIndex;
+                          table.deleteRow(ind);
+                        }
+                      </script>
 
-                          <div class="x_panel" style="height:300px;">
-                              <div class="x_title">
-                                  <h2>Invite Members to this Group <small>Add their emails</small></h2>
+                      <div class="x_panel" style="height:300px;">
+                        <div class="x_title">
+                          <h2>Invite Members to this Group <small>Add their emails</small></h2>
 
-                                  <div class="clearfix"></div>
-                                </div>
-                              <div class="x_content">
+                          <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
                           <table class="table" id="myTable">
-                              <thead>
-                              </thead>
-                              <tbody id="emailInviteList">
-                                  <tr id="row0">
-                                      <td>
-                                          <div class="input-group">
-                                              <input id="stock0" type="email" class="form-control" requiered="" />
-                                              <span class="input-group-btn">
+                            <thead>
+                            </thead>
+                            <tbody id="emailInviteList">
+                              <tr id="row0">
+                                <td>
+                                  <div class="input-group">
+                                    <input id="stock0" type="email" class="form-control" requiered="" />
+                                    <span class="input-group-btn">
                                                   <button id="btn0" type="button" class="btn btn-primary" onclick="addRow(this)">
                                                     <i id="icon0" class="fa fa-plus" aria-hidden="true"></i>
                                                   </button>
                                               </span>
-                                          </div>
-                                      </td>
-                                  </tr>
-                              </tbody>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
                           </table>
-                              </div>
-                          </div>
-
-                      </div>
-                      <div id="step-2">
-                          <div class="x_panel">
-                              <div class="x_title">
-                                <h2>Select Your Availability Below <!--<small>Custom design</small>--></h2>
-
-                                <div class="clearfix"></div>
-                              </div>
-
-                              <div class="x_content">
-
-                                <table class="table table-striped responsive-utilities jambo_table">
-                                  <thead>
-                                  <tr id="days_of_week" class="headings">
-                                    <!--<th>
-                                      <input type="checkbox" id="check-all" class="flat">
-                                    </th>-->
-                                    <th class="column-title">Times </th>
-                                    <!--<th class="column-title">Monday </th>-->
-                                    <!--<th class="column-title">Tuesday </th>-->
-                                    <!--<th class="column-title">Wednesday </th>-->
-                                    <!--<th class="column-title">Thursday </th>-->
-                                    <!--<th class="column-title">Friday </th>-->
-                                    <!--<th class="column-title">Saturday </th>-->
-                                    <!--<th class="column-title no-link last"><span class="nobr">Sunday</span>-->
-                                    <!--</th>-->
-                                    <!--<th class="bulk-actions" colspan="7">-->
-                                      <!--<a class="antoo" style="color:#fff; font-weight:500;">Bulk Actions ( <span class="action-cnt"> </span> ) <i class="fa fa-chevron-down"></i></a>-->
-                                    <!--</th>-->
-                                  </tr>
-                                  </thead>
-
-                                  <tbody>
-                                  <tr class="even pointer">
-                                    <td class=" "> 8 am</td>
-                                    <td id = '11' class="a-center ">
-                                      <input id = 'swag' type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '12' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '13' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '14' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '15' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '16' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '17' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                  </tr>
-
-                                  <tr class="even pointer">
-                                    <td class=" "> 9 am</td>
-                                    <td id = '21' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '22' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '23' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '24' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '25' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '26' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '27' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                  </tr>
-
-                                  <tr class="even pointer">
-                                    <td class=" "> 10 am</td>
-                                    <td id = '31' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '32' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '33' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '34' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '35' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '36' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '37' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                  </tr>
-
-                                  <tr class="even pointer">
-                                    <td class=" "> 11 am</td>
-                                    <td id = '41' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '42' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '43' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '44' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '45' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '46' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '47' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                  </tr>
-
-                                  <tr class="even pointer">
-                                    <td class=" "> 12 pm</td>
-                                    <td id = '51' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '52' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '53' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '54' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '55' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '56' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '57' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                  </tr>
-
-                                  <tr class="even pointer">
-                                    <td class=" "> 1 pm</td>
-                                    <td id = '61' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '62' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '63' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '64' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '65' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '66' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '67' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                  </tr>
-
-                                  <tr class="even pointer">
-                                    <td class=" "> 2 pm</td>
-                                    <td id = '71' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '72' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '73' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '74' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '75' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '76' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '77' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                  </tr>
-
-                                  <tr class="even pointer">
-                                    <td class=" "> 3 pm</td>
-                                    <td id = '81' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '82' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '83' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '84' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '85' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '86' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '87' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                  </tr>
-
-                                  <tr class="even pointer">
-                                    <td class=" "> 4 pm</td>
-                                    <td id = '91' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '92' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '93' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '94' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '95' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '96' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '97' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                  </tr>
-
-                                  <tr class="even pointer">
-                                    <td class=" "> 5 pm</td>
-                                    <td id = '101' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '102' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '103'class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '104' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '105' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '106' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '107' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                  </tr>
-
-                                  <tr class="even pointer">
-                                    <td class=" "> 6 pm</td>
-                                    <td id = '111' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '112' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '113' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '114' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '115' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '116' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '117' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                  </tr>
-
-                                  <tr class="even pointer">
-                                    <td class=" "> 7 pm</td>
-                                    <td id = '121' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '122' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '123' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '124' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '125' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '126' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td id = '127' class="a-center ">
-                                      <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                  </tr>
-
-                                  </tbody>
-
-                                </table>
-                              </div>
-                            </div>
-                      </div>
-                      <div id="step-3">
-                        <!-- <div class="col-md-2"></div> -->
-                        <div class="col-md-12">
-
-                          <div class="x_panel">
-                              <div class="x_title">
-                                  <h2>Activities <small>Select the activities you would like to do</small></h2>
-
-                                  <div class="clearfix"></div>
-                                </div>
-                              <div class="x_content">
-
-                                <table width="300px" id="datatable-checkbox" class="table table-striped table-bordered bulk_action m-r-30">
-                                  <thead>
-                                    <tr>
-                                      <th>
-                           <th><input type="checkbox" id="check-all" class="flat"></th>
-                          </th>
-                                      <th>Name</th>
-
-                                    </tr>
-                                  </thead>
-                                  <tbody id="activity-body">
-                                    <tr>
-                                      <td>
-                           <th><input id="activity" type="checkbox" id="check-all" class="flat"></th>
-                          </td>
-                                      <td>Bowling</td>
-
-                                    </tr>
-                                    <tr>
-                                     <td>
-                           <th><input id="activity" type="checkbox" id="check-all" class="flat"></th>
-                          </td>
-                                      <td>Chinese Food</td>
-
-                                    </tr>
-                                    <tr>
-                          <td>
-                             <th><input id="activity" type="checkbox" id="check-all" class="flat"></th>
-                          </td>
-                                      <td>Korean Food</td>
-
-                                    </tr>
-                                    <tr>
-                                      <td>
-                           <th><input id="activity" type="checkbox" id="check-all" class="flat"></th>
-                          </td>
-                                      <td>Escape Room</td>
-
-                                    </tr>
-                                    <tr>
-                                      <td>
-                           <th><input id="activity" type="checkbox" id="check-all" class="flat"></th>
-                          </td>
-                                      <td>Kareoke</td>
-
-                                    </tr>
-                                    <tr>
-                                      <td>
-                           <th><input id="activity" type="checkbox" id="check-all" class="flat"></th>
-                          </td>
-                                      <td>Shopping</td>
-
-                                    </tr>
-
-                                  </tbody>
-                                </table>
-                              </div>
-                            </div>
-                            </div>
-                            <!-- <div class="col-md-2"></div> -->
-
-                          </div>
+                        </div>
                       </div>
 
                     </div>
-                    <!-- End SmartWizard Content -->
+                    <div id="step-2">
+                      <div class="x_panel">
+                        <div class="x_title">
+                          <h2>Select Your Availability Below <!--<small>Custom design</small>--></h2>
 
+                          <div class="clearfix"></div>
+                        </div>
+
+                        <div class="x_content">
+
+                          <table class="table table-striped responsive-utilities jambo_table">
+                            <thead>
+                              <tr id="days_of_week" class="headings">
+                                <!--<th>
+                                      <input type="checkbox" id="check-all" class="flat">
+                                    </th>-->
+                                <th class="column-title">Times </th>
+                                <!--<th class="column-title">Monday </th>-->
+                                <!--<th class="column-title">Tuesday </th>-->
+                                <!--<th class="column-title">Wednesday </th>-->
+                                <!--<th class="column-title">Thursday </th>-->
+                                <!--<th class="column-title">Friday </th>-->
+                                <!--<th class="column-title">Saturday </th>-->
+                                <!--<th class="column-title no-link last"><span class="nobr">Sunday</span>-->
+                                <!--</th>-->
+                                <!--<th class="bulk-actions" colspan="7">-->
+                                <!--<a class="antoo" style="color:#fff; font-weight:500;">Bulk Actions ( <span class="action-cnt"> </span> ) <i class="fa fa-chevron-down"></i></a>-->
+                                <!--</th>-->
+                              </tr>
+                            </thead>
+
+                            <tbody>
+                              <tr class="even pointer">
+                                <td class=" "> 8 am</td>
+                                <td id='11' class="a-center ">
+                                  <input id='swag' type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='12' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='13' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='14' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='15' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='16' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='17' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                              </tr>
+
+                              <tr class="even pointer">
+                                <td class=" "> 9 am</td>
+                                <td id='21' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='22' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='23' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='24' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='25' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='26' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='27' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                              </tr>
+
+                              <tr class="even pointer">
+                                <td class=" "> 10 am</td>
+                                <td id='31' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='32' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='33' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='34' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='35' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='36' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='37' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                              </tr>
+
+                              <tr class="even pointer">
+                                <td class=" "> 11 am</td>
+                                <td id='41' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='42' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='43' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='44' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='45' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='46' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='47' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                              </tr>
+
+                              <tr class="even pointer">
+                                <td class=" "> 12 pm</td>
+                                <td id='51' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='52' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='53' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='54' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='55' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='56' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='57' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                              </tr>
+
+                              <tr class="even pointer">
+                                <td class=" "> 1 pm</td>
+                                <td id='61' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='62' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='63' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='64' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='65' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='66' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='67' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                              </tr>
+
+                              <tr class="even pointer">
+                                <td class=" "> 2 pm</td>
+                                <td id='71' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='72' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='73' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='74' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='75' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='76' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='77' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                              </tr>
+
+                              <tr class="even pointer">
+                                <td class=" "> 3 pm</td>
+                                <td id='81' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='82' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='83' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='84' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='85' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='86' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='87' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                              </tr>
+
+                              <tr class="even pointer">
+                                <td class=" "> 4 pm</td>
+                                <td id='91' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='92' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='93' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='94' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='95' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='96' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='97' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                              </tr>
+
+                              <tr class="even pointer">
+                                <td class=" "> 5 pm</td>
+                                <td id='101' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='102' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='103' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='104' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='105' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='106' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='107' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                              </tr>
+
+                              <tr class="even pointer">
+                                <td class=" "> 6 pm</td>
+                                <td id='111' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='112' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='113' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='114' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='115' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='116' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='117' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                              </tr>
+
+                              <tr class="even pointer">
+                                <td class=" "> 7 pm</td>
+                                <td id='121' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='122' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='123' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='124' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='125' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='126' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                                <td id='127' class="a-center ">
+                                  <input type="checkbox" class="flat" name="table_records">
+                                </td>
+                              </tr>
+
+                            </tbody>
+
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="step-3">
+                      <!-- <div class="col-md-2"></div> -->
+                      <div class="col-md-12">
+
+                        <div class="x_panel">
+                          <div class="x_title">
+                            <h2>Activities <small>Select the activities you would like to do</small></h2>
+
+                            <div class="clearfix"></div>
+                          </div>
+                          <div class="x_content">
+
+                            <table width="300px" id="datatable-checkbox" class="table table-striped table-bordered bulk_action m-r-30">
+                              <thead>
+                                <tr>
+                                  <th>
+                                    <th><input type="checkbox" id="check-all" class="flat"></th>
+                                  </th>
+                                  <th>Name</th>
+
+                                </tr>
+                              </thead>
+                              <tbody id="activity-body">
+                                <tr>
+                                  <td>
+                                    <th><input id="activity" type="checkbox" id="check-all" class="flat"></th>
+                                  </td>
+                                  <td>Bowling</td>
+
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <th><input id="activity" type="checkbox" id="check-all" class="flat"></th>
+                                  </td>
+                                  <td>Chinese Food</td>
+
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <th><input id="activity" type="checkbox" id="check-all" class="flat"></th>
+                                  </td>
+                                  <td>Korean Food</td>
+
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <th><input id="activity" type="checkbox" id="check-all" class="flat"></th>
+                                  </td>
+                                  <td>Escape Room</td>
+
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <th><input id="activity" type="checkbox" id="check-all" class="flat"></th>
+                                  </td>
+                                  <td>Kareoke</td>
+
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <th><input id="activity" type="checkbox" id="check-all" class="flat"></th>
+                                  </td>
+                                  <td>Shopping</td>
+
+                                </tr>
+
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- <div class="col-md-2"></div> -->
+
+                    </div>
                   </div>
+
                 </div>
+                <!-- End SmartWizard Content -->
+
               </div>
             </div>
           </div>
         </div>
-        <!-- /page content -->
-
-        <!-- footer content -->
-        <footer>
-          <div class="pull-right">
-            Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
-          </div>
-          <div class="clearfix"></div>
-        </footer>
-        <!-- /footer content -->
       </div>
     </div>
+    <!-- /page content -->
 
-    <!-- jQuery -->
-    <script src="vendors/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap -->
-    <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- FastClick -->
-    <script src="vendors/fastclick/lib/fastclick.js"></script>
-    <!-- NProgress -->
-    <script src="vendors/nprogress/nprogress.js"></script>
-    <!-- jQuery Smart Wizard -->
-    <script src="vendors/jQuery-Smart-Wizard/js/jquery.smartWizard.js"></script>
-    <!-- Custom Theme Scripts -->
-    <script src="build/js/custom.js"></script>
+    <!-- footer content -->
+    <footer>
+      <div class="pull-right">
+        Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+      </div>
+      <div class="clearfix"></div>
+    </footer>
+    <!-- /footer content -->
+  </div>
+  </div>
 
-        <script src="vendors/iCheck/icheck.min.js"></script>
-        <!-- Datatables -->
-        <script src="vendors/datatables.net/js/jquery.dataTables.min.js"></script>
-        <script src="vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
-        <script src="vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
-        <script src="vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
-        <script src="vendors/datatables.net-buttons/js/buttons.flash.min.js"></script>
-        <script src="vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
-        <script src="vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
-        <script src="vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
-        <script src="vendors/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
-        <script src="vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
-        <script src="vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
-        <script src="vendors/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
-        <script src="vendors/jszip/dist/jszip.min.js"></script>
-        <script src="vendors/pdfmake/build/pdfmake.min.js"></script>
-        <script src="vendors/pdfmake/build/vfs_fonts.js"></script>
-        <script src="sai.js"></script>
+  <!-- jQuery -->
+  <script src="vendors/jquery/dist/jquery.min.js"></script>
+  <!-- Bootstrap -->
+  <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+  <!-- FastClick -->
+  <script src="vendors/fastclick/lib/fastclick.js"></script>
+  <!-- NProgress -->
+  <script src="vendors/nprogress/nprogress.js"></script>
+  <!-- jQuery Smart Wizard -->
+  <script src="vendors/jQuery-Smart-Wizard/js/jquery.smartWizard.js"></script>
+  <!-- Custom Theme Scripts -->
+  <script src="build/js/custom.js"></script>
 
-        <script src="menu.js"></script>
+  <script src="vendors/iCheck/icheck.min.js"></script>
+  <!-- Datatables -->
+  <script src="vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+  <script src="vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+  <script src="vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+  <script src="vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+  <script src="vendors/datatables.net-buttons/js/buttons.flash.min.js"></script>
+  <script src="vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
+  <script src="vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
+  <script src="vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
+  <script src="vendors/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+  <script src="vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+  <script src="vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
+  <script src="vendors/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
+  <script src="vendors/jszip/dist/jszip.min.js"></script>
+  <script src="vendors/pdfmake/build/pdfmake.min.js"></script>
+  <script src="vendors/pdfmake/build/vfs_fonts.js"></script>
+  <script src="sai.js"></script>
+
+  <script src="menu.js"></script>
 
 
-  </body>
+</body>
+
 </html>
